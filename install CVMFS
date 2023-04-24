@@ -1,0 +1,8 @@
+#!bin/bash  # install CVMFS packages for ubuntu/debian:   
+apt-get update >> /dev/null   
+apt-get install lsb-release >> /dev/null   
+wget https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest_all.deb >> /dev/null   
+dpkg -i cvmfs-release-latest_all.deb >> /dev/null   
+rm -f cvmfs-release-latest_all.deb   
+apt-get update >> /dev/null   
+apt-get install cvmfs singularity-container tree >> /dev/null 
